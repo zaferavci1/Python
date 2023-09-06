@@ -115,8 +115,67 @@ type(calculate(10,50,20)) # calculate metodu tuple bir nesne olarak dönüş sa�
 varm, moisture, charge, output = calculate(10,50,20)
 
 
+# Koşullar
+
+if 1 == 1:
+    print("something")
+
+if 1 == 2:
+    print("something")
+
+def number_check(number):
+    if number == 10:
+        print("number is 10")
+    else:
+        print("number is not 10")
+
+number_check(9)
+
+def number_check(number):
+    if number > 10:
+        print("number grather than 10")
+    elif number <= 10:
+        print("number equal or less than 10")
+    else:
+        print("number less than 10")
+number_check(9)
 
 
+# LOOPS
+
+# for
+students = ["zafer", "boran", "serkan"]
+for i  in students:
+    print(i)
+
+for i in students:
+        print(i.upper())
+
+salaries = [1000, 2000, 3000, 4000]
+
+for salary in salaries:
+    if salary < 2010:
+        print(int(new_salary(salary, 20)))
+    else:
+        print(int(new_salary(salary, 10)))
+def new_salary(salaries, rate):
+    return salaries + salaries * rate / 100
+
+new_salary(1000,10)
+
+string ="zafer"
+def upper_string(str):
+    new_string = ""
+    for string_index in range(len(str)):
+        if string_index % 2 == 0:
+            new_string += str[string_index].upper()
+
+        else:
+            new_string += str[string_index].lower()
+
+    print(new_string)
+
+upper_string(string)
 
 
 
