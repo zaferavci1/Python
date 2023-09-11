@@ -178,7 +178,120 @@ def upper_string(str):
 upper_string(string)
 
 
+# Break-Continue-While
 
+salaries = [1000, 2000, 3000, 4000]
+
+for salary in salaries:
+    if salary == 3000:
+        break
+    print(salary)
+    
+
+for salary in salaries:
+    if salary == 3000:
+        continue
+    print(salary)
+
+number = 0
+while number < 5:
+    print(number)
+    number += 1
+
+
+# Enumerate: Otomatik indeks üretici/ Counter
+
+students = ["zafer", "boran", "serkan"]
+students2 = []
+students3 = []
+# for index, student in enumerate(students, 1):
+for index, student in enumerate(students):
+    print(index, student)
+
+for index, student in enumerate(students):
+    if index % 2 == 0:
+        students2.append(student)
+    else:
+        students3.append(student)
+
+def divide_students(list):
+    for index, student in enumerate(students):
+        if index % 2 == 0:
+            students2.append(student)
+        else:
+            students3.append(student)
+    students2.append(students3)
+    return students2
+
+divide_students(students)
+
+def alternating_with_enumerate(string):
+    new_string = ""
+    for i, letter in enumerate(string):
+        if i % 2 == 0:
+            new_string += letter.lower()
+        else:
+            new_string += letter.upper()
+    print(new_string)
+
+alternating_with_enumerate("hi my name is zafer and i am learning python")
+
+
+students = ["John", "Mark", "Venessa", "Mariam"]
+
+departments = ["mathematics", "statistics", "physics", "astronomy"]
+
+departments = [23, 30, 26, 22]
+
+list(zip(students, departments, departments))
+
+
+# lambda, map, filter, reduce
+
+# lambda bize kullan at tarzında bir fonksiyon tanımlamamızı sağlar
+
+new_sum = lambda a, b: a+b
+
+new_sum(5 + 9)
+
+# map
+
+
+salaries = [1000, 2000, 3000, 4000]
+def new_salary(salary):
+    return salary * 20 / 100 + salary
+
+new_salary(2000)
+
+for salary in salaries:
+    print(new_salary(salary))
+
+list(map(new_salary, salaries)) #map fonksiyonu bizden önce bir fonksiyon ister ardından üzerinde gezebileceğimiz iteratif bir nesne ister
+
+list(map(lambda x: x * 20 / 100 + x, salaries)) # lambda'yı burada daha iyi bir şekilde anlayabildik.
+
+list(map(lambda x: x ** 2, salaries))
+
+# FILTER  filtreleme işlemleri için kullanılır. Map fonksiyonu gibi kendisine üstünde gezebileceği iteratif bir nesne lazım
+
+list_store = [1, 2, 3, 4, 5, 6, 7]
+
+list(filter(lambda x: x % 2 == 0, list_store))
+
+
+# REDUCE
+
+from functools import reduce
+list_store = [1, 2, 3, 4]
+reduce(lambda a, b: a + b, list_store) # list store içerisindeki değerleri toplayarak bize verdi.
+
+
+string = "abracadabra"
+group = []
+for index, letter in enumerate(string, 1):
+    if index * 2 % 2 == 0:
+        group.append(letter)
+print(group)
 
 
 

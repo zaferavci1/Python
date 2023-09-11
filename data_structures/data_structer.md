@@ -304,7 +304,7 @@ set1.union(set2)
 set1.isdisjoint(set2)
 set2.isdisjoint(set1)
 ```
-> issubset() : Bir küme diğer kümeyi kapsıyor mu ?
+> issubset() : Bir küme diğerinin alt kümesi mi değil mi, söyler.
 ```
 set1 = set([1, 2, 3])
 set2 = set([1, 2, 3, 5, 6, 78, 8])
